@@ -1,0 +1,96 @@
+.Navbar{
+    font-weight: bold;
+     color: #E8F9FD;  
+    background-color: #0AA1DD;
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    margin: auto;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; 
+}
+ .name {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .name:hover{
+      color: #2155CD;
+       
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  .logo{
+      height: 70px;
+      width: 70px;
+       
+  }
+  .options{
+      display: flex;
+      justify-content: space-around;
+  }
+  .options:hover{
+    cursor: pointer;
+  }
+  .thired{
+      display: flex;
+       
+
+  }
+  .cart{
+      margin-left: 35px;
+  }
+  .search {
+      height: 30px;
+      width: 400px;
+      border-radius: 10px;
+      background-color: rgb(186, 230, 212);
+  }
+  .blog{
+      margin-top: 15px;
+      margin-left: 5px;
+  }
+  .contact{
+      margin-top: 15px;
+      margin-left: 20px;
+  }
+  .home{
+      margin-top: 15px;
+  }

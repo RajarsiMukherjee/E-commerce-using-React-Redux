@@ -1,0 +1,197 @@
+ 
+  .ProdDetails {
+    /* border: 2px solid red; */
+    width: 88%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    text-align: start;
+    margin-top: 2%;
+    margin-bottom: 3%;
+  }
+  
+  .ProdImage {
+    /* border: 2px solid blue; */
+    width: 45%;
+    height: 600px;
+    display: grid  ; 
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 60%) ;
+    gap: 1.5%;
+    
+    /* margin-top: 5%; */
+  }
+  .ProdImage>img{
+      width: 100%;
+      height: 100%;
+  }
+  .each-product img {
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .each-product img:hover {
+    transform: scale(1.03);
+  }
+  
+  .each-product {
+    text-decoration: none;
+    cursor: pointer;
+     
+  }
+  
+  .each-product div {
+    padding: 1% 4%;
+    color: black;
+  }
+  
+  .ProdInfo {
+    /* border: 2px solid peru; */
+    margin-left: 2%;
+    padding-left: 10%;
+    width: 70%;
+    height: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .ProdInfo > div:nth-child(1) > p {
+    
+     
+    font-weight: bold; 
+    font-size: 180%;
+  }
+  .ProdInfo > div:nth-child(2) > p {
+    /* border: 2px solid brown; */
+    /* font-weight: bold; */
+    font-size: 120%;
+  }
+  .ProdInfo > div:nth-child(3) > p {
+    /* border: 2px solid brown; */
+    width: 10%;
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+    /* font-weight: bolder; */
+    font-size: 120%;
+  }
+  .ProdInfo > div:nth-child(3) > p:hover{
+      border: 1px solid black;
+  }
+  .checked {
+    color: green;
+  }
+  
+  .PriceDiv {
+    display: flex;
+  }
+  
+  .PriceDiv>div:nth-child(1)>p{
+      /* border: 2px solid green; */
+      /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+      /* font-weight: bolder; */
+      font-size: 170%;
+      width: 100%;
+      margin: 0px;
+  }
+  .PriceDiv>div:nth-child(2)>p{
+      /* border: 2px solid green; */
+      /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+      /* font-weight: bolder; */
+      font-size: 170%;
+      margin: 0px;
+      margin-left: 25px;
+      width: 100%;
+      color: #80828d;
+      text-decoration: line-through;
+  }
+  .PriceDiv>div:nth-child(3)>p{
+      /* border: 2px solid green; */
+      /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+      /* font-weight: bolder; */
+      font-size: 170%;
+      margin: 0px;
+      margin-left: 25px;
+      width: 100%;
+      color: #ff905a;
+  }
+  
+  .SelectSizeDiv{
+      margin-top: 3%;
+  }
+  .SelectSizeDiv>span:nth-child(1){
+      /* border: 2px solid red; */
+      /* font-weight: bold; */
+      font-size: larger;
+      color: black;
+  }
+  .SelectSizeDiv>span:nth-child(2){
+      /* border: 2px solid red; */
+      margin-left: 4%;
+      color: #ff6097;
+      /* font-weight: bolder; */
+      /* font-size: larger; */
+  }
+  
+  .sizesDiv {
+      width: 80%;
+      margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .sizesDiv>div{
+      border: 2px solid rgb(3, 3, 3);
+      width: 42px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      margin-bottom: 5%;
+      margin-top: 4%;
+      padding-top: 2%;
+  }
+  .sizesDiv>div>p{
+      margin-top: -0.001px;
+      font-size: 120%;
+      font-weight: 8px;
+  }
+  .sizesDiv>div:hover{
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      border: 2px solid rgb(216, 46, 46);
+  }
+  
+  .AddButton{
+      margin-top: 10%;
+      display: flex;
+  }
+  
+  .AddButton>button:nth-child(1){
+      width: 45%;
+      height: 50px;  
+      background-color: #ff3e6c;
+      border: none;
+      color: whitesmoke;
+      font-size: larger;
+      font-weight: bolder;
+  }
+  
+  .AddButton>button:nth-child(2){
+      width: 35%;
+      margin-left: 5%;
+      /* background-color: #ff3e6c; */
+      border: none;
+      /* color: whitesmoke; */
+      font-size: larger;
+      font-weight: bolder;
+  }
+  .AddButton>button:nth-child(2):hover{
+      border: 1px solid black;
+  }
+  
+  .PorductDetailDiv>p{
+  /* border: 2px solid red; */
+  margin-top:10%;
+  font-size: 140%;
+  /* font-weight: bolder; */
+  }
+  .tax{
+      color: rgb(29, 189, 29);
+      font-weight: bold;
+  }

@@ -1,0 +1,79 @@
+.ConatctDetailsMain{
+    display: flex;
+    /* border: 2px solid black; */
+    padding-top: 5%;
+    padding-bottom: 4%;
+    justify-content: space-around;
+}
+.ConatctDetails{
+    font-family: sans-serif;
+  text-align: center;
+  width: 35%;
+  /*border: 1px solid rgb(0, 255, 0);*/
+}
+ 
+.AddAddress{
+    margin: auto;
+    margin-top: 5%;
+    border: 2px solid #20c4ff;
+    background-color: #20c4ff;
+    color: whitesmoke;
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    margin-left: 5%;
+    /* padding-top: 1%; */
+}
+.AddAddress:hover{
+     color: #20c4ff;
+     background-color: white;
+     cursor: pointer;
+}
+
+.AddAddress>div>p{
+    font-weight: bolder;
+    /* font-size: larger; */
+}
+
+.ConatctCartData{
+    /*border: 2px solid red;*/
+    width: 55%;
+    
+}
+.flex_table {
+    display: flex;
+    /* justify-content: space-evenly; */
+     
+}
+ 
+.cvv{
+    display: flex;
+     
+}
+.ProdAddress{
+    display: flex;
+    width: 70%;
+    /*border: 1px solid red;*/
+    justify-content: space-around;
+}
+.Shipping{
+     
+    width: 40%;
+}
+.AddAddress1 {
+    margin: auto;
+    margin-top: 5%;
+    border: 2px solid #20c4ff;
+    background-color: #20c4ff; 
+    color: white;
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    margin-left: 5%;
+    /* padding-top: 1%; */
+}
+.AddAddress1:hover{
+     color: #20c4ff;
+     background-color: white;
+     cursor: pointer;
+}
