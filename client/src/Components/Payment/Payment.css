@@ -9,6 +9,7 @@
     font-family: sans-serif;
   text-align: center;
   width: 35%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   /*border: 1px solid rgb(0, 255, 0);*/
 }
  
@@ -36,7 +37,7 @@
 }
 
 .ConatctCartData{
-    /*border: 2px solid red;*/
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 55%;
     
 }
@@ -57,7 +58,8 @@
     justify-content: space-around;
 }
 .Shipping{
-     
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 40%;
 }
 .AddAddress1 {
