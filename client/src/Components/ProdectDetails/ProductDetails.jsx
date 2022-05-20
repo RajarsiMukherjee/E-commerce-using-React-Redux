@@ -6,18 +6,16 @@ import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux'
 // import store from "../../Redux/Store"
-import { addCart, addWishlist } from '../../Redux/Cart/Action'
+import { addCart } from '../../Redux/Cart/Action'
 
 export default function ProductDetails() {
     const { id } = useParams()
     const [data, setData] = useState(null)
-    // console.log("sad id", id)
+     
 
     const dispatch = useDispatch()
     const cart = useSelector((store) => store.cart.cart)
-
-    // console.log(cart)
-
+     
     useEffect(() => {
 
         if (id) axios.get(`https://macbackendraj.herokuapp.com/products/${id}`).then((res) => setData(res.data))
@@ -25,6 +23,7 @@ export default function ProductDetails() {
 
     const handleAddBag = () => {
         console.log(data)
+
         dispatch(addCart(data))
         alert("Product Added To Cart Successfully")
     }
@@ -77,7 +76,7 @@ export default function ProductDetails() {
                     </div>
 
                     <div className='AddButton'>
-                        <button onClick={handleAddBag}>ADD TO BAG</button>
+                        <button onClick={() => {handleAddBag(data._id)}}>ADD TO BAG</button>
                         <button>WISHLIST</button>
                     </div>
 

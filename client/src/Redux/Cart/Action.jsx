@@ -6,6 +6,7 @@ export const DATA_FAILURE = "DATA_FAILURE";
 export const ADD_CART = "ADD_CART";
 export const DELETE_ITEM_CART = "DELETE_ITEM_CART";
 export const EMPTY_CART = "EMPTY_CART";
+export const REMOVE_ONE_CART = "REMOVE_ONE_CART";
 
  
 export const dataLoading = () => ({
@@ -23,6 +24,11 @@ export const dataFailure =() => ({
 
 export const addCart = (payload) => ({
     type : ADD_CART,
+    payload
+});
+
+export const removeOneCart = (payload) => ({
+    type : REMOVE_ONE_CART,
     payload
 });
 

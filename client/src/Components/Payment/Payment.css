@@ -9,7 +9,7 @@
     font-family: sans-serif;
   text-align: center;
   width: 35%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /*border: 1px solid rgb(0, 255, 0);*/
 }
  
@@ -37,8 +37,9 @@
 }
 
 .ConatctCartData{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /*border: 2px solid red;*/
     width: 55%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
 }
 .flex_table {
@@ -58,8 +59,7 @@
     justify-content: space-around;
 }
 .Shipping{
-    
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
     width: 40%;
 }
 .AddAddress1 {

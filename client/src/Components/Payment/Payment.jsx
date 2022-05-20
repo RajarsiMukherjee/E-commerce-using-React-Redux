@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Payment.css"
 import { store } from '../../Redux/Store';
+import { addCart, removeOneCart } from '../../Redux/Cart/Action'
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 // import "./CartPage.css";
 // import { store } from "../../Redux/Store"
 import { deleteItemCart } from '../../Redux/Cart/Action';
@@ -18,7 +20,7 @@ export default function Payment() {
     const contactInfoAppend = useSelector((store) => store.shippingDataInfo.ShippingData)
     console.log("contact data o append", contactInfoAppend)
     const navigate = useNavigate()
-
+    const [totalMRP, setTotalMRP] = useState(0)
     const dispatch = useDispatch()
     const data = useSelector((store) => store.cart.cart)
 
@@ -28,10 +30,30 @@ export default function Payment() {
     var total = 0;
 
     for (var i = 0; i < data.length; i++) {
-        total += data[i].price.sp
+        console.log("qty", data[i].qty, "price", data[i].price.sp)
+        total += (data[i].price.sp * data[i].qty)
+
     }
-    //   const dispatch = useDispatch()
+
     console.log("total all", total)
+
+    useEffect(() => {
+        setTotalMRP(total)
+    }, [total])
+
+    const handleAddBag = (e) => {
+        console.log("data", e)
+        dispatch(addCart(e))
+        // alert("Product Added To Cart Successfully")
+        toast.success("Product Added To Cart Successfully")
+    }
+
+    const handleRemoveQuantity = (e) => {
+        console.log("remove", e)
+        dispatch(removeOneCart(e))
+        // alert("Product Added To Cart Successfully")
+        // toast.success("Product Added To Cart Successfully")
+    }
 
     const handleCheckout = () => {
         console.log("out")
@@ -150,12 +172,12 @@ export default function Payment() {
                                                 <button onClick={() => dispatch(deleteItemCart(e.id))}>REMOVE</button>
                                             </div>
                                             <div className='quantity'>
-                                                <button>+</button>
-                                                <p>1</p>
-                                                <button>-</button>
+                                                <button onClick={() => handleAddBag(e)}>+</button>
+                                                <p>{e.qty}</p>
+                                                <button onClick={() => handleRemoveQuantity(e)}>-</button>
                                             </div>
                                             <p>${e.price.sp}</p>
-                                            <p>${e.price.sp}</p>
+                                            <p>${(e.qty) * (e.price.sp)}</p>
 
                                         </div>
 
@@ -200,4 +222,3 @@ export default function Payment() {
 }
 
 
- 

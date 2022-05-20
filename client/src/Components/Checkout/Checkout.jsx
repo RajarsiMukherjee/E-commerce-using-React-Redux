@@ -1,6 +1,10 @@
-import React, { useState } from 'react'
+ 
 import "./Checkout.css"
+import { useEffect, useState } from 'react'
+import { addCart, removeOneCart } from '../../Redux/Cart/Action'
+import { toast } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
+ 
 // import "./CartPage.css";
 import { store } from "../../Redux/Store"
 import { deleteItemCart } from '../../Redux/Cart/Action';
@@ -13,25 +17,46 @@ import { dataAdd } from '../../Redux/Shiping/Action';
 export default function Checkout() {
   const dipatch = useDispatch()
   const navigate = useNavigate()
-  const dispatch = useDispatch()
+
   const data = useSelector((store) => store.cart.cart)
+  const [totalMRP, setTotalMRP] = useState(0)
   console.log("cart", data)
 
-  const[name , setName]= useState("");
-  const[mobile, setMobile] = useState("")
-  const[pincode, setPincose] = useState("")
-  const[address, setAddress] = useState("")
-  const[locality, setLocality] = useState("")
-  const[city, setCity] = useState("")
-  const[state, setState] = useState("")
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("")
+  const [pincode, setPincose] = useState("")
+  const [address, setAddress] = useState("")
+  const [locality, setLocality] = useState("")
+  const [city, setCity] = useState("")
+  const [state, setState] = useState("")
 
   var total = 0;
 
   for (var i = 0; i < data.length; i++) {
-    total += data[i].price.sp
+    console.log("qty", data[i].qty, "price", data[i].price.sp)
+    total += (data[i].price.sp * data[i].qty)
+
   }
-  //   const dispatch = useDispatch()
+  const dispatch = useDispatch()
   console.log("total all", total)
+
+  useEffect(() => {
+    setTotalMRP(total)
+  }, [total])
+
+  const handleAddBag = (e) => {
+    console.log("data", e)
+    dispatch(addCart(e))
+    // alert("Product Added To Cart Successfully")
+    toast.success("Product Added To Cart Successfully")
+  }
+
+  const handleRemoveQuantity = (e) => {
+    console.log("remove", e)
+    dispatch(removeOneCart(e))
+    // alert("Product Added To Cart Successfully")
+    // toast.success("Product Added To Cart Successfully")
+  }
 
   const handleContinue = () => {
     const data = {
@@ -44,7 +69,7 @@ export default function Checkout() {
       state
     }
     dispatch(dataAdd(data))
-    console.log("datatt" , data)
+    console.log("datatt", data)
     navigate("/payment")
   }
 
@@ -74,9 +99,9 @@ export default function Checkout() {
 
 
         <div >
-          <div onClick={ handleContinue
+          <div onClick={handleContinue
             // () => navigate("/payment")
-            }><button disabled={!name ||!mobile || !pincode || !address || !locality || !city || !state} className='AddAddress' ><b>CONTINUE</b></button></div>
+          }><button disabled={!name || !mobile || !pincode || !address || !locality || !city || !state} className='AddAddress' ><b>CONTINUE</b></button></div>
         </div>
       </div>
 
@@ -109,12 +134,12 @@ export default function Checkout() {
                       <button onClick={() => dispatch(deleteItemCart(e.id))}>REMOVE</button>
                     </div>
                     <div className='quantity'>
-                      <button>+</button>
-                      <p>1</p>
-                      <button>-</button>
+                      <button onClick={() => handleAddBag(e)}>+</button>
+                      <p>{e.qty}</p>
+                      <button onClick={() => handleRemoveQuantity(e)}>-</button>
                     </div>
                     <p>${e.price.sp}</p>
-                    <p>${e.price.sp}</p>
+                    <p>${(e.qty) * (e.price.sp)}</p>
 
                   </div>
 
