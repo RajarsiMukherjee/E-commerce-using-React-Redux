@@ -1,4 +1,11 @@
 # E-commerce-using-React-Redux
 
 
-<p><a href="[https://www.w3schools.com](https://mac-e-commerce-rajarsimukherjee.vercel.app/)/">Visit myEcommerce</a></p>
+<!DOCTYPE html>
+<html>
+<body>
+ <p><a href="https://mac-e-commerce-rajarsimukherjee.vercel.app">Visit myEcommerce</a></p>
+
+</body>
+</html>
+
