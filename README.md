@@ -10,7 +10,7 @@
 
  <p><b>Tech Stack:</b> React JS | Redux | CSS | Material UI | MongoDB |NodeJS</p>
  <p><a href="https://mac-e-commerce-rajarsimukherjee.vercel.app">Visit myEcommerce</a></p>
- <img src="https://raw.githubusercontent.com/RajarsiMukherjee/E-commerce-using-React-Redux/main/Screenshot%20(31).png" alt="" width="42" height="42"  >
+ <img src="https://raw.githubusercontent.com/RajarsiMukherjee/E-commerce-using-React-Redux/main/Screenshot%20(31).png" alt="" width="200" height="80"  >
 
 </body>
 </html>
